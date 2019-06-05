@@ -1,0 +1,18 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <option name="HTML_ATTRIBUTE_WRAP" value="0" />
+    <CssCodeStyleSettings>
+      <option name="SPACE_BEFORE_OPENING_BRACE" value="false" />
+    </CssCodeStyleSettings>
+    <HTMLCodeStyleSettings>
+      <option name="HTML_ATTRIBUTE_WRAP" value="0" />
+    </HTMLCodeStyleSettings>
+    <PHPCodeStyleSettings>
+      <option name="PLACE_PARENS_FOR_CONSTRUCTOR" value="2" />
+    </PHPCodeStyleSettings>
+    <codeStyleSettings language="PHP">
+      <option name="CLASS_BRACE_STYLE" value="1" />
+      <option name="METHOD_BRACE_STYLE" value="1" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>
