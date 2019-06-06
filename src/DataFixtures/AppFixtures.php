@@ -10,7 +10,9 @@ use Faker\Factory;
 
 class AppFixtures extends Fixture
 {
+
     private $faker;
+
     private $slug;
 
     public function __construct(Slugify $slugify)
@@ -18,7 +20,6 @@ class AppFixtures extends Fixture
         $this->faker = Factory::create();
         $this->slug = $slugify;
     }
-
     public function load(ObjectManager $manager)
     {
         $this->loadPosts($manager);
