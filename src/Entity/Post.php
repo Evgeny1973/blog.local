@@ -5,7 +5,7 @@ namespace App\Entity;
 use DateTimeInterface;
 use Doctrine\DBAL\Types\DateType;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraint as Assert;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -21,7 +21,7 @@ class Post
 
     /**
      * @ORM\Column(type="string", nullable=false)
-     * @Assert\Lenght(min=10, max=255)
+     * @Assert\Length(min=10, max=255)
      */
     private $title;
 
