@@ -44,9 +44,10 @@ class PostsController extends AbstractController
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted()) {
+            echo 123;
             $post->setSlug($slugify->slugify($post->getTitle()));
-            $post->setCreatedAt(new \DateTime);
+            $post->setCreatedAt(new \DateTime());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
