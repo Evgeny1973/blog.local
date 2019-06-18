@@ -45,6 +45,7 @@ class RegisterController extends AbstractController
      * @Route("/confirm/{code}", name="email_confirmation")
      * @param UserRepository $userRepository
      * @param string $code
+     * @return Response
      */
     public function confirmEmail(UserRepository $userRepository, string $code)
     {
