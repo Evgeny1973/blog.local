@@ -3,22 +3,27 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="user")
+ * @UniqueEntity(fields={"email"}, message="У вас уже есть аккаунт")
  */
 class User implements UserInterface
 {
     /**
+     * @var int
      * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
+     * @var string
      * @ORM\Column(type="string", unique=true)
      * @Assert\NotBlank();
      * @Assert\Email();
@@ -60,6 +65,16 @@ class User implements UserInterface
     }
 
     /**
+     * @param string $password
+     * @return User
+     */
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+    /**
      * @return null
      */
     public function getSalt()
@@ -67,64 +82,62 @@ class User implements UserInterface
         return null;
     }
 
-
-
-
-
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getEmail(): ?string
+    /**
+     * @return string
+     */
+    public function getUsername(): string
     {
         return $this->email;
     }
 
+    public function eraseCredentials()
+    {
+        $this->plainPassword = null;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     * @return User
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
         return $this;
     }
 
     /**
-     * A visual identifier that represents this user.
-     *
-     * @see UserInterface
+     * @return int
      */
-    public function getUsername(): string
+    public function getId(): int
     {
-        return (string) $this->email;
+        return $this->id;
     }
-
-
-
-    public function setRoles(array $roles): self
-    {
-        $this->roles = $roles;
-
-        return $this;
-    }
-
-
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-
 
     /**
-     * @see UserInterface
+     * @return string
      */
-    public function eraseCredentials()
+    public function getPlainPassword(): string
     {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
+        return $this->plainPassword;
     }
+
+    /**
+     * @param string $plainPassword
+     * @return User
+     */
+    public function setPlainPassword(string $plainPassword): self
+    {
+        $this->plainPassword = $plainPassword;
+        return $this;
+    }
+
+
 }
