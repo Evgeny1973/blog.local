@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Регистрация {% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h3 class="text-center">Регистрация</h3>
+        {{ form_start(form) }}
+        {{ form_row(form.email, {
+            'label': ' ', 'attr': {'placeholder': 'Ваш email'}
+        }) }}
+        {{ form_row(form.plainPassword.first, {
+            'label': ' ', 'class': 'form-control', 'attr': {'placeholder': 'Ваш пароль'}
+        }) }}
+        {{ form_row(form.plainPassword.second, {
+            'label': ' ', 'attr': {'placeholder': 'Пароль повторно'}
+        }) }}
+        <button type="submit" class="btn btn-success" formnovalidate>Зарегистрироваться</button>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
