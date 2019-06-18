@@ -3,6 +3,8 @@ IndexIgnore */*
 RewriteEngine on
 
 RewriteCond %{REQUEST_URI} !^/(public)
+RewriteRule ^css/(.*)$ public/build/css/$1 [L]
+RewriteRule ^js/(.*)$ public/build/js/$1 [L]
 RewriteRule (.*) /public/$1
 
 RewriteCond %{REQUEST_FILENAME} !-f
