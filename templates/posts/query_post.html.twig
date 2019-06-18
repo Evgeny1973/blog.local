@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Результаты поиска{% endblock %}
+
+{% block body %}
+    <small class="d-block text-left mt-3">
+        <a href="{{ path('blog_posts') }}">На главную</a>
+        <hr>
+    </small>
+    {% for post in posts %}
+        <div class="media text-muted pt-3">
+            <h3>
+                <a href="{{ path('blog_show', {slug: post.slug}) }}">{{ post.title }}</a>
+            </h3>
+            <p class="text-muted">
+                {{ post.body | slice(0, 255) ~ '...' }}
+            </p>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
