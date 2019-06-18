@@ -22,12 +22,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/RegisterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="381">
+              <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding>
                 <element signature="e#34#54#0#PHP" expanded="true" />
                 <element signature="e#1271#1300#0#PHP" expanded="true" />
-                <element signature="e#2008#2045#1#PHP" expanded="true" />
+                <element signature="e#2034#2070#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -343,7 +343,7 @@
       <workItem from="1560604519170" duration="1667000" />
       <workItem from="1560715580451" duration="4665000" />
       <workItem from="1560754793524" duration="678000" />
-      <workItem from="1560839161818" duration="20861000" />
+      <workItem from="1560839161818" duration="20907000" />
     </task>
     <task id="LOCAL-00001" summary="Faker works">
       <created>1559827785253</created>
@@ -422,11 +422,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560895790461</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Registration">
+      <created>1560895808515</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560895808515</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69917000" />
+    <option name="totallyTimeSpent" value="69963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="17" width="1389" height="826" extended-state="0" />
@@ -801,12 +808,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="381">
+          <caret line="58" column="49" lean-forward="true" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
           <folding>
             <element signature="e#34#54#0#PHP" expanded="true" />
             <element signature="e#1271#1300#0#PHP" expanded="true" />
-            <element signature="e#2008#2045#1#PHP" expanded="true" />
+            <element signature="e#2034#2070#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

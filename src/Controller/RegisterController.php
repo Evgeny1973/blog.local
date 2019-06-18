@@ -47,7 +47,7 @@ class RegisterController extends AbstractController
      * @param string $code
      * @return Response
      */
-    public function confirmEmail(UserRepository $userRepository, string $code)
+    public function confirmEmail(UserRepository $userRepository, string $code): Response
     {
         $user = $userRepository->findOneBy(['confirmationCode' => $code]);
         if (null === $user) {
@@ -59,6 +59,6 @@ class RegisterController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $em->flush();
 
-        return $this->render(':security:account_confirm.html.twig', ['user' => $user]);
+        return $this->render('security/account_confirm.html.twig', ['user' => $user]);
     }
 }
