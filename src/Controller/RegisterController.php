@@ -42,7 +42,7 @@ class RegisterController extends AbstractController
             $em->flush();
 
             $userRegisteredEvent = new RegisteredUserEvent($user);
-            $eventDispatcher->dispatch(RegisteredUserEvent::NAME, $userRegisteredEvent);
+            $eventDispatcher->dispatch($userRegisteredEvent, RegisteredUserEvent::NAME);
         }
 
         return $this->render('security/register.html.twig',
